@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block bodyblock %}
+<div class="container">
+    <h3 class="display-8">Webcam Gender Prediction</h3>
+    <video id="webcam" autoplay width="640" height="480"></video>
+    <br />
+    <button id="toggleCapture" class="btn btn-outline-primary">Start Capture</button>
+    <div id="results"></div>
+</div>
+
+<script src="{{ url_for('static', filename='webcam_capture.js') }}"></script>
+{% endblock %}
